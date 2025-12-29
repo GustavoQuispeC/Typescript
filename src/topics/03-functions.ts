@@ -35,15 +35,20 @@ const healCharacter = (character: Character, amount: number): void => {
   );
 };
 
-healCharacter(
-  {
-    name: "Gandalf",
-    hp: 50,
+const strider: Character = {
+    name: "Strider",
+    hp: 100,
     showHp() {
-      console.log(`HP: ${this.hp}`);
-    },
-  },
-  20
-);
+      console.log(`Current HP of ${this.name}: ${this.hp}`);
+    }
+
+}
+
+healCharacter(strider, 20);
+
+strider.showHp();
+
+
+
 
 export {};
